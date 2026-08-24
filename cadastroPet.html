@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Cadastre seu Pet</title>
+
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- ================= HEADER ================= -->
+        <header class="header">
+
+            <div class="header-top">
+
+                <button class="back-button" id="backButton" type="button">
+                    <span>‹</span>
+                </button>
+
+                <h1>CADASTRE SEU PET</h1>
+
+                <div class="header-paw">
+                    <span class="paw">●</span>
+                    <span class="paw paw-left">●</span>
+                    <span class="paw paw-right">●</span>
+                    <span class="paw paw-bottom">●</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTEÚDO ================= -->
+        <section class="content">
+
+            <form id="petForm" novalidate>
+
+                <!-- NOME -->
+                <div class="form-row">
+
+    <div class="field-icon dog-icon">
+        ♡
+    </div>
+
+    <div class="field-content">
+
+        <label for="nome">NOME:</label>
+
+        <input
+            type="text"
+            id="nome"
+            name="nome"
+            autocomplete="off"
+        >
+
+    </div>
+
+</div>
+
+
+
+                <!-- ESPÉCIE -->
+                <div class="form-row">
+
+                    <div class="field-icon paw-icon">
+                        ✣
+                    </div>
+
+                    <div class="field-content">
+
+                        <label>ESPÉCIE:</label>
+
+                        <div class="options">
+
+                            <label class="check-option">
+
+                                <input
+                                    type="radio"
+                                    name="especie"
+                                    value="cachorro"
+                                >
+
+                                <span class="custom-check"></span>
+
+                                <span>CACHORRO</span>
+
+                            </label>
+
+
+                            <label class="check-option">
+
+                                <input
+                                    type="radio"
+                                    name="especie"
+                                    value="gato"
+                                >
+
+                                <span class="custom-check"></span>
+
+                                <span>GATO</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RAÇA -->
+                <div class="form-row">
+
+                    <div class="field-icon">
+                        ♢
+                    </div>
+
+                    <div class="field-content">
+
+                        <label for="raca">RAÇA:</label>
+
+                        <input
+                            type="text"
+                            id="raca"
+                            name="raca"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- IDADE -->
+                <div class="form-row">
+
+                    <div class="field-icon">
+                        ▣
+                    </div>
+
+                    <div class="field-content">
+
+                        <label for="idade">IDADE:</label>
+
+                        <input
+                            type="number"
+                            id="idade"
+                            name="idade"
+                            min="0"
+                            max="100"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESCRIÇÃO -->
+                <div class="form-row">
+
+                    <div class="field-icon">
+                        ▢
+                    </div>
+
+                    <div class="field-content">
+
+                        <label for="descricao">
+                            DESCRIÇÃO DO ANIMAL:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="descricao"
+                            name="descricao"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- MICROCHIPADO -->
+                <div class="form-row">
+
+                    <div class="field-icon">
+                        ▣
+                    </div>
+
+                    <div class="field-content">
+
+                        <label>MICROCHIPADO:</label>
+
+                        <div class="options">
+
+                            <label class="check-option">
+
+                                <input
+                                    type="radio"
+                                    name="microchipado"
+                                    value="sim"
+                                >
+
+                                <span class="custom-check"></span>
+
+                                <span>SIM</span>
+
+                            </label>
+
+
+                            <label class="check-option">
+
+                                <input
+                                    type="radio"
+                                    name="microchipado"
+                                    value="nao"
+                                >
+
+                                <span class="custom-check"></span>
+
+                                <span>NÃO</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CASTRADO -->
+                <div class="form-row">
+
+                    <div class="field-icon">
+                        ♢
+                    </div>
+
+                    <div class="field-content">
+
+                        <label>CASTRADO:</label>
+
+                        <div class="options">
+
+                            <label class="check-option">
+
+                                <input
+                                    type="radio"
+                                    name="castrado"
+                                    value="sim"
+                                >
+
+                                <span class="custom-check"></span>
+
+                                <span>SIM</span>
+
+                            </label>
+
+
+                            <label class="check-option">
+
+                                <input
+                                    type="radio"
+                                    name="castrado"
+                                    value="nao"
+                                >
+
+                                <span class="custom-check"></span>
+
+                                <span>NÃO</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO -->
+                <div class="form-row photo-row">
+
+                    <div class="field-icon">
+                        ▧
+                    </div>
+
+                    <div class="field-content">
+
+                        <label>MÍDIA DO ANIMAL</label>
+
+                        <div
+                            class="upload-area"
+                            id="uploadArea"
+                        >
+
+                            <input
+                                type="file"
+                                id="animalImage"
+                                accept="image/*"
+                                hidden
+                            >
+
+                            <div
+                                class="upload-content"
+                                id="uploadContent"
+                            >
+
+                                <div class="upload-icon">
+                                    ⇧
+                                </div>
+
+                                <strong>
+                                    Clique para enviar uma mídia
+                                </strong>
+
+                                <small>
+                                    ou arraste e solte aqui
+                                </small>
+
+                            </div>
+
+                            <img
+                                id="imagePreview"
+                                class="image-preview"
+                                alt="Prévia da imagem"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+                <button
+                    type="submit"
+                    class="submit-button"
+                    id="submitButton"
+                >
+                    Clique para cadastrar
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= NAVEGAÇÃO ================= -->
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-item active"
+                data-page="home"
+                type="button"
+            >
+                <span class="nav-icon">⌂</span>
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="pets"
+                type="button"
+            >
+                <span class="nav-icon">♧</span>
+            </button>
+
+
+            <button
+                class="nav-item main-nav"
+                data-page="add"
+                type="button"
+            >
+
+                <div class="pet-avatar">
+                    🐶
+                    <span>🐱</span>
+                </div>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="messages"
+                type="button"
+            >
+                <span class="nav-icon">➤</span>
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="profile"
+                type="button"
+            >
+                <span class="nav-icon">♙</span>
+            </button>
+
+        </nav>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+
+        /* ============================================
+           ELEMENTOS
+        ============================================ */
+
+        const form = document.getElementById("petForm");
+
+        const uploadArea = document.getElementById("uploadArea");
+
+        const fileInput = document.getElementById("animalImage");
+
+        const uploadContent =
+            document.getElementById("uploadContent");
+
+        const imagePreview =
+            document.getElementById("imagePreview");
+
+        const submitButton =
+            document.getElementById("submitButton");
+
+        const backButton =
+            document.getElementById("backButton");
+
+
+        /* ============================================
+           ANIMAÇÃO INICIAL
+        ============================================ */
+
+        window.addEventListener("load", () => {
+
+            document.body.classList.add("loaded");
+
+            const rows =
+                document.querySelectorAll(".form-row");
+
+            rows.forEach((row, index) => {
+
+                row.style.animationDelay =
+                    `${index * 0.055}s`;
+
+            });
+
+        });
+
+
+        /* ============================================
+           INPUTS
+        ============================================ */
+
+        const inputs =
+            document.querySelectorAll(
+                "input[type='text'], input[type='number']"
+            );
+
+        inputs.forEach(input => {
+
+            input.addEventListener("focus", () => {
+
+                input.parentElement.classList.add(
+                    "field-focused"
+                );
+
+            });
+
+
+            input.addEventListener("blur", () => {
+
+                input.parentElement.classList.remove(
+                    "field-focused"
+                );
+
+            });
+
+
+            input.addEventListener("input", () => {
+
+                if (input.value.trim() !== "") {
+
+                    input.classList.add("has-value");
+
+                } else {
+
+                    input.classList.remove("has-value");
+
+                }
+
+            });
+
+        });
+
+
+        /* ============================================
+           UPLOAD DE IMAGEM
+        ============================================ */
+
+        uploadArea.addEventListener("click", () => {
+
+            fileInput.click();
+
+        });
+
+
+        fileInput.addEventListener("change", event => {
+
+            const file =
+                event.target.files[0];
+
+            if (file) {
+
+                showImage(file);
+
+            }
+
+        });
+
+
+        function showImage(file) {
+
+            if (!file.type.startsWith("image/")) {
+
+                showNotification(
+                    "Selecione uma imagem válida."
+                );
+
+                return;
+
+            }
+
+            const reader =
+                new FileReader();
+
+            reader.onload = event => {
+
+                imagePreview.src =
+                    event.target.result;
+
+                imagePreview.classList.add(
+                    "visible"
+                );
+
+                uploadContent.classList.add(
+                    "hidden"
+                );
+
+                uploadArea.classList.add(
+                    "has-image"
+                );
+
+            };
+
+            reader.readAsDataURL(file);
+
+        }
+
+
+        /* ============================================
+           DRAG & DROP
+        ============================================ */
+
+        [
+            "dragenter",
+            "dragover"
+        ].forEach(eventName => {
+
+            uploadArea.addEventListener(
+                eventName,
+                event => {
+
+                    event.preventDefault();
+
+                    uploadArea.classList.add(
+                        "dragging"
+                    );
+
+                }
+            );
+
+        });
+
+
+        [
+            "dragleave",
+            "drop"
+        ].forEach(eventName => {
+
+            uploadArea.addEventListener(
+                eventName,
+                event => {
+
+                    event.preventDefault();
+
+                    uploadArea.classList.remove(
+                        "dragging"
+                    );
+
+                }
+            );
+
+        });
+
+
+        uploadArea.addEventListener(
+            "drop",
+            event => {
+
+                const file =
+                    event.dataTransfer.files[0];
+
+                if (!file) return;
+
+                fileInput.files =
+                    event.dataTransfer.files;
+
+                showImage(file);
+
+            }
+        );
+
+
+        /* ============================================
+           RADIO BUTTONS
+        ============================================ */
+
+        /* =========================================================
+   RADIO BUTTONS COM TOGGLE
+========================================================= */
+
+const radioInputs =
+    document.querySelectorAll(
+        "input[type='radio']"
+    );
+
+radioInputs.forEach(radio => {
+
+    radio.addEventListener("click", function (event) {
+
+        /*
+         * Guardamos o estado antes do clique.
+         * Isso permite clicar novamente no mesmo
+         * SIM/NÃO para desmarcar.
+         */
+
+        const estavaSelecionado =
+            this.dataset.selected === "true";
+
+
+        /*
+         * Se já estava selecionado,
+         * cancela a seleção.
+         */
+
+        if (estavaSelecionado) {
+
+            event.preventDefault();
+
+            this.checked = false;
+
+            this.dataset.selected = "false";
+
+            this
+                .closest(".check-option")
+                .classList.remove("selected");
+
+            return;
+        }
+
+
+        /*
+         * Remove a seleção dos outros
+         * elementos do mesmo grupo.
+         */
+
+        const grupo =
+            document.querySelectorAll(
+                `input[name="${this.name}"]`
+            );
+
+
+        grupo.forEach(outro => {
+
+            outro.dataset.selected = "false";
+
+            outro
+                .closest(".check-option")
+                .classList.remove("selected");
+
+        });
+
+
+        /*
+         * Seleciona o atual.
+         */
+
+        this.checked = true;
+
+        this.dataset.selected = "true";
+
+        this
+            .closest(".check-option")
+            .classList.add("selected");
+
+    });
+
+});
+
+        radioInputs.forEach(radio => {
+
+            radio.addEventListener(
+                "change",
+                () => {
+
+                    const group =
+                        document.querySelectorAll(
+                            `input[name="${radio.name}"]`
+                        );
+
+                    group.forEach(item => {
+
+                        item
+                            .closest(".check-option")
+                            .classList.remove(
+                                "selected"
+                            );
+
+                    });
+
+
+                    radio
+                        .closest(".check-option")
+                        .classList.add(
+                            "selected"
+                        );
+
+                }
+            );
+
+        });
+
+
+        /* ============================================
+           ENVIO DO FORMULÁRIO
+        ============================================ */
+
+        form.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+                const nome =
+                    document.getElementById(
+                        "nome"
+                    );
+
+                if (nome.value.trim() === "") {
+
+                    nome.focus();
+
+                    nome.classList.add(
+                        "input-error"
+                    );
+
+                    setTimeout(() => {
+
+                        nome.classList.remove(
+                            "input-error"
+                        );
+
+                    }, 800);
+
+                    showNotification(
+                        "Informe o nome do seu pet 🐾"
+                    );
+
+                    return;
+
+                }
+
+
+                submitButton.classList.add(
+                    "loading"
+                );
+
+                submitButton.innerHTML =
+                    '<span class="loader"></span> Cadastrando...';
+
+
+                setTimeout(() => {
+
+                    submitButton.classList.remove(
+                        "loading"
+                    );
+
+                    submitButton.innerHTML =
+                        "✓ Pet cadastrado!";
+
+                    submitButton.classList.add(
+                        "success"
+                    );
+
+                    showNotification(
+                        "Seu pet foi cadastrado com sucesso! 🐶❤️"
+                    );
+
+
+                    setTimeout(() => {
+
+                        submitButton.innerHTML =
+                            "Clique para cadastrar";
+
+                        submitButton.classList.remove(
+                            "success"
+                        );
+
+                    }, 2200);
+
+                }, 1000);
+
+            }
+        );
+
+
+        /* ============================================
+           BOTÃO VOLTAR
+        ============================================ */
+
+        backButton.addEventListener(
+            "click",
+            () => {
+
+                backButton.classList.add(
+                    "clicked"
+                );
+
+                setTimeout(() => {
+
+                    backButton.classList.remove(
+                        "clicked"
+                    );
+
+                }, 300);
+
+
+                if (window.history.length > 1) {
+
+                    window.history.back();
+
+                }
+
+            }
+        );
+
+
+        /* ============================================
+           MENU INFERIOR
+        ============================================ */
+
+        const navItems =
+            document.querySelectorAll(
+                ".nav-item"
+            );
+
+        navItems.forEach(item => {
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    navItems.forEach(nav => {
+
+                        nav.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                    item.classList.add(
+                        "active"
+                    );
+
+
+                    item.animate(
+                        [
+                            {
+                                transform:
+                                    "translateY(0) scale(1)"
+                            },
+                            {
+                                transform:
+                                    "translateY(-5px) scale(1.08)"
+                            },
+                            {
+                                transform:
+                                    "translateY(0) scale(1)"
+                            }
+                        ],
+                        {
+                            duration: 400,
+                            easing:
+                                "cubic-bezier(.2,.8,.2,1)"
+                        }
+                    );
+
+                }
+            );
+
+        });
+
+
+        /* ============================================
+           NOTIFICAÇÃO
+        ============================================ */
+
+        function showNotification(message) {
+
+            const old =
+                document.querySelector(
+                    ".notification"
+                );
+
+            if (old) old.remove();
+
+
+            const notification =
+                document.createElement("div");
+
+            notification.className =
+                "notification";
+
+            notification.textContent =
+                message;
+
+            document.body.appendChild(
+                notification
+            );
+
+
+            requestAnimationFrame(() => {
+
+                notification.classList.add(
+                    "show"
+                );
+
+            });
+
+
+            setTimeout(() => {
+
+                notification.classList.remove(
+                    "show"
+                );
+
+                setTimeout(() => {
+
+                    notification.remove();
+
+                }, 300);
+
+            }, 2500);
+
+        }
+
+    </script>
+
+</body>
+</html>
